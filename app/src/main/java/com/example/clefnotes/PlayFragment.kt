@@ -16,4 +16,11 @@ class PlayFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_play, container, false)
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        val bar = view.findViewById<Bar>(R.id.bar)
+        bar.createNewRound()
+
+        super.onViewCreated(view, savedInstanceState)
+    }
 }
