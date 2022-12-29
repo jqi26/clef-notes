@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#BB9351"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/fret1"
+        android:layout_width="2sp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/fret2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/fret2"
+        android:layout_width="2sp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+        app:layout_constraintStart_toEndOf="@+id/fret1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/highEString"
+        android:layout_width="wrap_content"
+        android:layout_height="2sp"
+        android:layout_marginTop="30dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/bString"
+        android:layout_width="wrap_content"
+        android:layout_height="2sp"
+        android:layout_marginTop="30dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/highEString" />
+
+    <View
+        android:id="@+id/gString"
+        android:layout_width="wrap_content"
+        android:layout_height="2sp"
+        android:layout_marginTop="30dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bString" />
+
+    <View
+        android:id="@+id/dString"
+        android:layout_width="wrap_content"
+        android:layout_height="2sp"
+        android:layout_marginTop="30dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gString" />
+
+    <View
+        android:id="@+id/aString"
+        android:layout_width="wrap_content"
+        android:layout_height="2sp"
+        android:layout_marginTop="30dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dString" />
+
+    <View
+        android:id="@+id/lowEString"
+        android:layout_width="wrap_content"
+        android:layout_height="2sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aString" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.75"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/highEStringFret1"
+        android:layout_width="0dp"
+        android:layout_height="20sp"
+        android:background="@android:color/transparent"
+        android:textSize="0sp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:paddingHorizontal="0dp"
+        android:paddingVertical="0dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="0dp"
+        android:text="Button"
+        app:iconPadding="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/highEString"
+        app:layout_constraintEnd_toStartOf="@+id/fret1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/highEString"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/highEStringFret2"
+        android:layout_width="0dp"
+        android:layout_height="20sp"
+        android:background="@android:color/transparent"
+        android:textSize="0sp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:paddingHorizontal="0dp"
+        android:paddingVertical="0dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="0dp"
+        android:text="Button"
+        app:iconPadding="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/highEString"
+        app:layout_constraintEnd_toStartOf="@+id/fret2"
+        app:layout_constraintStart_toEndOf="@+id/fret1"
+        app:layout_constraintTop_toTopOf="@+id/highEString"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/highEStringFret3"
+        android:layout_width="0dp"
+        android:layout_height="20sp"
+        android:background="@android:color/transparent"
+        android:textSize="0sp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:paddingHorizontal="0dp"
+        android:paddingVertical="0dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="0dp"
+        android:text="Button"
+        app:iconPadding="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/highEString"
+        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+        app:layout_constraintStart_toEndOf="@+id/fret2"
+        app:layout_constraintTop_toTopOf="@+id/highEString"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/highEStringOpen"
+        android:layout_width="0dp"
+        android:layout_height="20sp"
+        android:background="@android:color/transparent"
+        android:textSize="0sp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:paddingHorizontal="0dp"
+        android:paddingVertical="0dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="0dp"
+        android:text="High E String Open"
+        app:iconPadding="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/highEString"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline5"
+        app:layout_constraintTop_toTopOf="@+id/highEString"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/bStringFret1"
+        android:layout_width="0dp"
+        android:layout_height="20sp"
+        android:background="@android:color/transparent"
+        android:textSize="0sp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:paddingHorizontal="0dp"
+        android:paddingVertical="0dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="0dp"
+        android:text="Button"
+        app:iconPadding="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bString"
+        app:layout_constraintEnd_toStartOf="@+id/fret1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bString"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/bStringFret2"
+        android:layout_width="0dp"
+        android:layout_height="20sp"
+        android:background="@android:color/transparent"
+        android:textSize="0sp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:paddingHorizontal="0dp"
+        android:paddingVertical="0dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="0dp"
+        android:text="Button"
+        app:iconPadding="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bString"
+        app:layout_constraintEnd_toStartOf="@+id/fret2"
+        app:layout_constraintStart_toEndOf="@+id/fret1"
+        app:layout_constraintTop_toTopOf="@+id/bString"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/bStringFret3"
+        android:layout_width="0dp"
+        android:layout_height="20sp"
+        android:background="@android:color/transparent"
+        android:textSize="0sp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:paddingHorizontal="0dp"
+        android:paddingVertical="0dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="0dp"
+        android:text="Button"
+        app:iconPadding="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bString"
+        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+        app:layout_constraintStart_toEndOf="@+id/fret2"
+        app:layout_constraintTop_toTopOf="@+id/bString"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/bStringOpen"
+        android:layout_width="0dp"
+        android:layout_height="20sp"
+        android:background="@android:color/transparent"
+        android:textSize="0sp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:paddingHorizontal="0dp"
+        android:paddingVertical="0dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="0dp"
+        android:text="Button"
+        app:iconPadding="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bString"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline5"
+        app:layout_constraintTop_toTopOf="@+id/bString"
+        tools:ignore="TouchTargetSizeCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,7 +6,7 @@ import android.widget.FrameLayout
 import android.widget.ImageView
 import androidx.core.view.isInvisible
 
-class Bar  @JvmOverloads constructor(
+class Bar @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyle: Int = 0
