@@ -293,4 +293,14 @@
         app:layout_constraintTop_toTopOf="@+id/bString"
         tools:ignore="TouchTargetSizeCheck" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/dString"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintStart_toEndOf="@+id/fret2"
+        app:layout_constraintTop_toBottomOf="@+id/gString"
+        app:srcCompat="@drawable/ic_baseline_circle_24" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

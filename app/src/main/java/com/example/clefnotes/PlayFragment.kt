@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 
 
-class PlayFragment : Fragment() {
+class PlayFragment : Fragment(), GuitarListenerDelegate {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -19,8 +19,15 @@ class PlayFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val bar = view.findViewById<Bar>(R.id.bar)
+        val guitar = view.findViewById<Guitar>(R.id.guitar)
+        guitar.delegate = this
+
         bar.createNewRound()
 
         super.onViewCreated(view, savedInstanceState)
+    }
+
+    override fun didPlayNote(note: Note) {
+        println(note)
     }
 }

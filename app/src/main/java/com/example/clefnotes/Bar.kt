@@ -5,6 +5,7 @@ import android.util.AttributeSet
 import android.widget.FrameLayout
 import android.widget.ImageView
 import androidx.core.view.isInvisible
+import kotlin.system.exitProcess
 
 class Bar @JvmOverloads constructor(
     context: Context,
@@ -76,6 +77,7 @@ class Bar @JvmOverloads constructor(
                     Note.HIGH_G -> firstHighGView.isInvisible = false
                     Note.HIGH_F -> firstHighFView.isInvisible = false
                     Note.HIGH_E -> firstHighEView.isInvisible = false
+                    else -> { exitProcess(0) }
                 }
             }
             1 -> {
@@ -83,6 +85,7 @@ class Bar @JvmOverloads constructor(
                     Note.HIGH_G -> secondHighGView.isInvisible = false
                     Note.HIGH_F -> secondHighFView.isInvisible = false
                     Note.HIGH_E -> secondHighEView.isInvisible = false
+                    else -> { exitProcess(0) }
                 }
             }
             2 -> {
@@ -90,6 +93,7 @@ class Bar @JvmOverloads constructor(
                     Note.HIGH_G -> thirdHighGView.isInvisible = false
                     Note.HIGH_F -> thirdHighFView.isInvisible = false
                     Note.HIGH_E -> thirdHighEView.isInvisible = false
+                    else -> { exitProcess(0) }
                 }
             }
             3 -> {
@@ -97,6 +101,7 @@ class Bar @JvmOverloads constructor(
                     Note.HIGH_G -> fourthHighGView.isInvisible = false
                     Note.HIGH_F -> fourthHighFView.isInvisible = false
                     Note.HIGH_E -> fourthHighEView.isInvisible = false
+                    else -> { exitProcess(0) }
                 }
             }
             else -> System.exit(0) // At a column not valid for current supported time signatures
