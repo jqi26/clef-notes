@@ -8,6 +8,15 @@ enum class Note {
     HIGH_E,
     OTHER;
 
+    override fun toString(): String {
+        when (this) {
+            HIGH_G -> return "G"
+            HIGH_F -> return "F"
+            HIGH_E -> return "E"
+            OTHER -> return "N/A"
+        }
+    }
+
     companion object {
         private val random = Random()
 
