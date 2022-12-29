@@ -12,6 +12,7 @@ class Bar @JvmOverloads constructor(
     attrs: AttributeSet? = null,
     defStyle: Int = 0
 ) : FrameLayout(context, attrs, defStyle) {
+    var notes: ArrayList<Note> = arrayListOf()
 
     private val firstHighGView: ImageView
     private val secondHighGView: ImageView
@@ -52,7 +53,7 @@ class Bar @JvmOverloads constructor(
     }
 
     fun createNewRound() {
-        val notes: ArrayList<Note> = arrayListOf()
+        notes = arrayListOf()
 
         // Four beats in a bar. Could potentially support 3/4 and other time signatures later?
         for (i in 0..3) {

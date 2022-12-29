@@ -9,7 +9,7 @@ import com.example.clefnotes.Note
 class Answer(
     @ColumnInfo(name = "user_answer") var userAnswer: Note,
     @ColumnInfo(name = "correct_answer") var correctAnswer: Note,
-    @ColumnInfo(name = "time_ms") var timeMS: Int,
+    @ColumnInfo(name = "time_ms") var timeMS: Long,
 ) {
     @PrimaryKey(autoGenerate = true) var id: Long = 0
 
