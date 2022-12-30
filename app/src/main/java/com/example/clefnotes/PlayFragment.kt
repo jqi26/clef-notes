@@ -68,22 +68,19 @@ class PlayFragment : Fragment(), GuitarListenerDelegate {
             playedNote3.setText(note.toString())
         } else {
             playedNote4.setText(note.toString())
-            updateData()
         }
 
         currentBeat++
-
         if (currentBeat == BEATS_PER_BAR) {
-            currentBar++
-
             if (currentBar == NUMBER_OF_BARS) {
                 gameOver()
+            } else {
+                currentBeat = 0
+                currentBar++
+                updateData()
+                beatStartTime = Date()
             }
-
-            currentBeat = 0
         }
-
-        beatStartTime = Date()
     }
 
     private fun updateData() {
