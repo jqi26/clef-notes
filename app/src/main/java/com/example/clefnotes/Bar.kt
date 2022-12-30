@@ -48,8 +48,10 @@ class Bar @JvmOverloads constructor(
         fourthHighEView = findViewById(R.id.fourthHighE)
     }
 
-    fun testMethod() {
-        println("Bar method")
+    fun showNotes(notes: List<Note>) {
+        for ((index, note) in notes.withIndex()) {
+            showNote(index, note)
+        }
     }
 
     fun createNewRound() {

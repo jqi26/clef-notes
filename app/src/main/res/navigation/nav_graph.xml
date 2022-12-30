@@ -18,5 +18,14 @@
         android:id="@+id/playFragment"
         android:name="com.example.clefnotes.PlayFragment"
         android:label="fragment_play"
-        tools:layout="@layout/fragment_play" />
+        tools:layout="@layout/fragment_play" >
+        <action
+            android:id="@+id/action_playFragment_to_gameSummaryFragment"
+            app:destination="@id/gameSummaryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameSummaryFragment"
+        android:name="com.example.clefnotes.GameSummaryFragment"
+        android:label="fragment_game_summary"
+        tools:layout="@layout/fragment_game_summary" />
 </navigation>

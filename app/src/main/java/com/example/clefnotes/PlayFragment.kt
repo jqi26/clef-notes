@@ -6,7 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
-import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.navGraphViewModels
 import com.example.clefnotes.room.Answer
 import java.util.*
 import kotlin.collections.ArrayList
@@ -29,7 +30,7 @@ class PlayFragment : Fragment(), GuitarListenerDelegate {
 
     private lateinit var bar: Bar
 
-    private val playViewModel: PlayViewModel by viewModels()
+    private val playViewModel: PlayViewModel by navGraphViewModels(R.id.nav_graph)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -76,8 +77,7 @@ class PlayFragment : Fragment(), GuitarListenerDelegate {
             currentBar++
 
             if (currentBar == NUMBER_OF_BARS) {
-                // TODO: Handle end of game
-                printGameSummary()
+                gameOver()
             }
 
             currentBeat = 0
@@ -97,6 +97,12 @@ class PlayFragment : Fragment(), GuitarListenerDelegate {
         playedNote2.setText("")
         playedNote3.setText("")
         playedNote4.setText("")
+    }
+
+    private fun gameOver() {
+        printGameSummary()
+
+        findNavController().navigate(R.id.action_playFragment_to_gameSummaryFragment)
     }
 
     private fun printGameSummary() {
