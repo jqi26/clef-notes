@@ -6,6 +6,7 @@ enum class Note {
     HIGH_G,
     HIGH_F,
     HIGH_E,
+    HIGH_D,
     OTHER;
 
     override fun toString(): String {
@@ -13,6 +14,7 @@ enum class Note {
             HIGH_G -> return "G"
             HIGH_F -> return "F"
             HIGH_E -> return "E"
+            HIGH_D -> return "D"
             OTHER -> return "N/A"
         }
     }

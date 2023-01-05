@@ -29,6 +29,11 @@ class Bar @JvmOverloads constructor(
     private val thirdHighEView: ImageView
     private val fourthHighEView: ImageView
 
+    private val firstHighDView: ImageView
+    private val secondHighDView: ImageView
+    private val thirdHighDView: ImageView
+    private val fourthHighDView: ImageView
+
     init {
         inflate(context, R.layout.bar, this)
 
@@ -46,6 +51,11 @@ class Bar @JvmOverloads constructor(
         secondHighEView = findViewById(R.id.secondHighE)
         thirdHighEView = findViewById(R.id.thirdHighE)
         fourthHighEView = findViewById(R.id.fourthHighE)
+
+        firstHighDView = findViewById(R.id.firstHighD)
+        secondHighDView = findViewById(R.id.secondHighD)
+        thirdHighDView = findViewById(R.id.thirdHighD)
+        fourthHighDView = findViewById(R.id.fourthHighD)
     }
 
     fun showNotes(notes: List<Note>) {
@@ -80,6 +90,7 @@ class Bar @JvmOverloads constructor(
                     Note.HIGH_G -> firstHighGView.isInvisible = false
                     Note.HIGH_F -> firstHighFView.isInvisible = false
                     Note.HIGH_E -> firstHighEView.isInvisible = false
+                    Note.HIGH_D -> firstHighDView.isInvisible = false
                     else -> { exitProcess(0) }
                 }
             }
@@ -88,6 +99,7 @@ class Bar @JvmOverloads constructor(
                     Note.HIGH_G -> secondHighGView.isInvisible = false
                     Note.HIGH_F -> secondHighFView.isInvisible = false
                     Note.HIGH_E -> secondHighEView.isInvisible = false
+                    Note.HIGH_D -> secondHighDView.isInvisible = false
                     else -> { exitProcess(0) }
                 }
             }
@@ -96,6 +108,7 @@ class Bar @JvmOverloads constructor(
                     Note.HIGH_G -> thirdHighGView.isInvisible = false
                     Note.HIGH_F -> thirdHighFView.isInvisible = false
                     Note.HIGH_E -> thirdHighEView.isInvisible = false
+                    Note.HIGH_D -> thirdHighDView.isInvisible = false
                     else -> { exitProcess(0) }
                 }
             }
@@ -104,6 +117,7 @@ class Bar @JvmOverloads constructor(
                     Note.HIGH_G -> fourthHighGView.isInvisible = false
                     Note.HIGH_F -> fourthHighFView.isInvisible = false
                     Note.HIGH_E -> fourthHighEView.isInvisible = false
+                    Note.HIGH_D -> fourthHighDView.isInvisible = false
                     else -> { exitProcess(0) }
                 }
             }
@@ -126,5 +140,10 @@ class Bar @JvmOverloads constructor(
         secondHighEView.isInvisible = true
         thirdHighEView.isInvisible = true
         fourthHighEView.isInvisible = true
+
+        firstHighDView.isInvisible = true
+        secondHighDView.isInvisible = true
+        thirdHighDView.isInvisible = true
+        fourthHighDView.isInvisible = true
     }
 }
