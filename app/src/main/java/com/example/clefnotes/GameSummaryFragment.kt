@@ -1,16 +1,21 @@
 package com.example.clefnotes
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import androidx.core.view.MenuHost
+import androidx.core.view.MenuProvider
+import androidx.lifecycle.Lifecycle
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.navGraphViewModels
 import androidx.recyclerview.widget.RecyclerView
 import com.example.clefnotes.room.Answer
+import kotlin.system.exitProcess
 
 class GameSummaryFragment : Fragment() {
-    private val playViewModel: PlayViewModel by navGraphViewModels(R.id.nav_graph)
+    private val playViewModel: PlayViewModel by navGraphViewModels(R.id.nav_graph) {
+        PlayViewModelFactory((activity?.application as ClefNotesApplication).repository)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,8 +35,35 @@ class GameSummaryFragment : Fragment() {
             immutableDataset = it.toList().map { it.toList() }
         }
 
-        println(immutableDataset)
-
         recyclerView.adapter = GameSummaryAdapter(immutableDataset)
+
+        setUpMenu()
+    }
+
+    private fun setUpMenu() {
+        (requireActivity() as MenuHost).addMenuProvider(object : MenuProvider {
+            override fun onPrepareMenu(menu: Menu) {
+                // Handle for example visibility of menu items
+            }
+
+            override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
+                menuInflater.inflate(R.menu.game_summary_menu, menu)
+            }
+
+            override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
+                when (menuItem.itemId) {
+                    R.id.gameSummarySaveButton -> {
+                        playViewModel.save()
+                        findNavController().navigate(R.id.action_gameSummaryFragment_to_mainFragment)
+                    }
+                    else -> {
+                        println("Invalid game summary menu button pressed")
+                        exitProcess(1)
+                    }
+                }
+                // Validate and handle the selected menu item
+                return true
+            }
+        }, viewLifecycleOwner, Lifecycle.State.RESUMED)
     }
 }

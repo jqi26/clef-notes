@@ -30,7 +30,9 @@ class PlayFragment : Fragment(), GuitarListenerDelegate {
 
     private lateinit var bar: Bar
 
-    private val playViewModel: PlayViewModel by navGraphViewModels(R.id.nav_graph)
+    private val playViewModel: PlayViewModel by navGraphViewModels(R.id.nav_graph) {
+        PlayViewModelFactory((activity?.application as ClefNotesApplication).repository)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
