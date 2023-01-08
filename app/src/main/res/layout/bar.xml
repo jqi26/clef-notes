@@ -42,7 +42,7 @@
         app:srcCompat="@drawable/ic_baseline_circle_24" />
 
     <View
-        android:id="@+id/highELine"
+        android:id="@+id/highFLine"
         android:layout_width="0dp"
         android:layout_height="2sp"
         android:background="@color/black"
@@ -63,7 +63,7 @@
 
     <View
         android:id="@+id/bLine"
-        android:layout_width="411dp"
+        android:layout_width="0dp"
         android:layout_height="2sp"
         android:background="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,7 +72,7 @@
 
     <View
         android:id="@+id/gLine"
-        android:layout_width="411dp"
+        android:layout_width="0dp"
         android:layout_height="2sp"
         android:background="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
@@ -81,7 +81,7 @@
 
     <View
         android:id="@+id/midELine"
-        android:layout_width="411dp"
+        android:layout_width="0dp"
         android:layout_height="2sp"
         android:background="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
@@ -137,11 +137,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/highELine"
+        app:layout_constraintBottom_toBottomOf="@+id/highFLine"
         app:layout_constraintEnd_toStartOf="@+id/secondHighF"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/highELine"
+        app:layout_constraintTop_toTopOf="@+id/highFLine"
         app:srcCompat="@drawable/ic_baseline_circle_24" />
 
     <ImageView
@@ -185,7 +185,7 @@
         app:layout_constraintEnd_toStartOf="@+id/secondHighE"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/highELine"
+        app:layout_constraintTop_toBottomOf="@+id/highFLine"
         app:srcCompat="@drawable/ic_baseline_circle_24" />
 
     <ImageView
