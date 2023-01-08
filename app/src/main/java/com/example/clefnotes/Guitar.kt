@@ -15,7 +15,9 @@ class Guitar @JvmOverloads constructor(
     private val highEStringFret2: Button
     private val highEStringFret3: Button
     private val highEStringOpen: Button
+
     private val bStringFret3: Button
+    private val bStringOpen: Button
 
     lateinit var delegate: GuitarListenerDelegate
 
@@ -26,7 +28,9 @@ class Guitar @JvmOverloads constructor(
         highEStringFret2 = findViewById(R.id.highEStringFret2)
         highEStringFret3 = findViewById(R.id.highEStringFret3)
         highEStringOpen = findViewById(R.id.highEStringOpen)
+
         bStringFret3 = findViewById(R.id.bStringFret3)
+        bStringOpen = findViewById(R.id.bStringOpen)
 
         setUpGuitar()
     }
@@ -40,6 +44,14 @@ class Guitar @JvmOverloads constructor(
             } else if (highEStringFret3.isPressed) {
                 delegate.didPlayNote(Note.HIGH_G)
             } else if (bStringFret3.isPressed) {
+                delegate.didPlayNote(Note.HIGH_D)
+            } else {
+                delegate.didPlayNote(Note.HIGH_E)
+            }
+        }
+
+        bStringOpen.setOnClickListener {
+            if (bStringFret3.isPressed) {
                 delegate.didPlayNote(Note.HIGH_D)
             } else {
                 delegate.didPlayNote(Note.HIGH_E)

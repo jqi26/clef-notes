@@ -51,7 +51,7 @@ class StatsAdapter(private val dataSet: List<Stat>) :
         // contents of the view with that element
         viewHolder.note.text = dataSet[position].note.toString()
         viewHolder.averageTime.text = dataSet[position].averageTime.toString()
-        viewHolder.accuracy.text = dataSet[position].accuracy.toString() + "%"
+        viewHolder.accuracy.text = String.format("%s%%", (dataSet[position].accuracy * 100).toInt())
     }
 
     // Return the size of your dataset (invoked by the layout manager)

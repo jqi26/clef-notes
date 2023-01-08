@@ -5,7 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.addCallback
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.navGraphViewModels
 import androidx.recyclerview.widget.RecyclerView
 import com.example.clefnotes.room.Answer
@@ -31,6 +33,10 @@ class StatsFragment : Fragment() {
 
         val recyclerView = view.findViewById<RecyclerView>(R.id.statsRecyclerView)
         recyclerView.adapter = adapter
+
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner) {
+            findNavController().popBackStack()
+        }
 
         statsViewModel.highEAnswers.observe(viewLifecycleOwner) { answers ->
             updateStatsForNote(Note.HIGH_E, answers)
