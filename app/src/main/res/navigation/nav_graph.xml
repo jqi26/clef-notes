@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_mainFragment_to_playFragment"
             app:destination="@id/playFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_statsFragment"
+            app:destination="@id/statsFragment" />
     </fragment>
     <fragment
         android:id="@+id/playFragment"
@@ -32,4 +35,9 @@
             android:id="@+id/action_gameSummaryFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/statsFragment"
+        android:name="com.example.clefnotes.StatsFragment"
+        android:label="fragment_stats"
+        tools:layout="@layout/fragment_stats" />
 </navigation>

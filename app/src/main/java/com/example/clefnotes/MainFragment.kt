@@ -33,7 +33,7 @@ class MainFragment : Fragment() {
 
     private fun setUpStatsButton(view: View) {
         view.findViewById<Button>(R.id.statsButton).setOnClickListener {
-            println("Stas pressed!")
+            findNavController().navigate(R.id.action_mainFragment_to_statsFragment)
         }
     }
 }
