@@ -54,7 +54,9 @@ class GameSummaryFragment : Fragment() {
                 when (menuItem.itemId) {
                     R.id.gameSummarySaveButton -> {
                         playViewModel.save()
-                        findNavController().navigate(R.id.action_gameSummaryFragment_to_mainFragment)
+                        playViewModel.reset()
+                        findNavController().popBackStack()
+                        findNavController().popBackStack()
                     }
                     else -> {
                         println("Invalid game summary menu button pressed")

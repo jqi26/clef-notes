@@ -9,7 +9,7 @@ import com.example.clefnotes.room.AnswerRepository
 import kotlinx.coroutines.launch
 
 class PlayViewModel(private val answerRepository: AnswerRepository): ViewModel() {
-    val bars = MutableLiveData<MutableList<MutableList<Answer>>>(arrayListOf())
+    var bars = MutableLiveData<MutableList<MutableList<Answer>>>(arrayListOf())
 
     fun save() {
         bars.value?.let {
@@ -17,6 +17,10 @@ class PlayViewModel(private val answerRepository: AnswerRepository): ViewModel()
                 answerRepository.insert(it.flatten())
             }
         }
+    }
+
+    fun reset() {
+        bars = MutableLiveData<MutableList<MutableList<Answer>>>(arrayListOf())
     }
 }
 
