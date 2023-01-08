@@ -74,11 +74,13 @@ class PlayFragment : Fragment(), GuitarListenerDelegate {
 
         currentBeat++
         if (currentBeat == BEATS_PER_BAR) {
+            currentBar++
+            playViewModel.bars.value?.add(barAnswers)
+
             if (currentBar == NUMBER_OF_BARS) {
                 gameOver()
             } else {
                 currentBeat = 0
-                currentBar++
                 updateData()
                 beatStartTime = Date()
             }
@@ -86,8 +88,6 @@ class PlayFragment : Fragment(), GuitarListenerDelegate {
     }
 
     private fun updateData() {
-        playViewModel.bars.value?.add(barAnswers)
-
         barAnswers = arrayListOf()
         bar.createNewRound()
         beatStartTime = Date()
